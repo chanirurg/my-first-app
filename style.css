@@ -1,0 +1,24 @@
+
+/* Message board */
+#board {
+    width: 300px;
+    min-height: 500px;
+    border: 1px solid black;
+}
+
+/* Received and sent messages */
+.message {
+    width: 180px;
+    margin: 5px;
+    background-color: #F5FFAD;
+    padding: 5px;
+}
+
+/* Messages sent by current user */
+.sent {
+    margin-left: 115px;
+    background-color: #BEFF99;
+}
+body {
+    background-color: lightblue !important;
+}

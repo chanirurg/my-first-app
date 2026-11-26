@@ -1,0 +1,16 @@
+
+{
+  "name": "github-actions-exercise",
+  "version": "1.0.0",
+  "description": "Node.js server with automated tests and GitHub Actions",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node --check server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  }
+}

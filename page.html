@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Socket.IO Workshop</title>
+</head>
+<body>
+
+    <h1>WebSocket Communication</h1>
+
+    <p id="connection">Waiting for connection...</p>
+
+    <button onclick="sendRequest()">Send Request</button>
+
+    <p id="response"></p>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        const socket = io();
+
+        socket.on("confirm connection", function(msg) {
+            document.getElementById("connection").innerText = msg;
+        });
+
+        function sendRequest() {
+            socket.emit("request", "Hello from the client");
+        }
+
+        socket.on("response", function(msg) {
+            document.getElementById("response").innerText = msg;
+        });
+    </script>
+
+</body>
+</html>
